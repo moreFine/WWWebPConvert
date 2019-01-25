@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     UIImage *image = [UIImage imageNamed:@"test.PNG"];
+    NSLog(@"原始图片大小：%ld",UIImageJPEGRepresentation(image, 1.0).length);
     [UIImage imageToWebP:image
       compressionQuality:100
                    alpha:1
@@ -30,9 +31,10 @@
                  config->filter_sharpness = 0;
                  config->thread_level = 1;
              } completionBlock:^(NSData *result) {
-                 NSLog(@"--------webp转换成功");
+                 NSLog(@"webp转换成功,大小：%ld",result.length);
                  dispatch_async(dispatch_get_main_queue(), ^{
                      self.imageView.image = [UIImage imageWithWebPData:result];
+                     NSLog(@"转换为iOS可展示图片大小：%ld",UIImageJPEGRepresentation(self.imageView.image, 1.0).length);
                  });
              } failureBlock:^(NSError *error) {
                  NSLog(@"webp图片转换失败%@",error.localizedDescription);

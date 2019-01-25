@@ -10,10 +10,7 @@
 #define StringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [[str stringByReplacingOccurrencesOfString:@" " withString:@""] length] < 1 ? YES : NO )
 static void free_image_data(void *info, const void *data, size_t size)
 {
-    if(info != NULL)
-        WebPFreeDecBuffer(&(((WebPDecoderConfig *)info)->output));
-    else
-        free((void *)data);
+    free((void *)data);
 }
 
 @implementation UIImage (WebP)
@@ -158,7 +155,7 @@ static void free_image_data(void *info, const void *data, size_t size)
     
     // Construct UIImage from the decoded RGBA value array
     uint8_t *data = WebPDecodeRGBA([imgData bytes], [imgData length], &width, &height);
-    CGDataProviderRef provider = CGDataProviderCreateWithData(&config, data,width * height * 4 , free_image_data);//config.options.scaled_width  * config.options.scaled_height * 4
+    CGDataProviderRef provider = CGDataProviderCreateWithData(&config, data,width * height * 4 , free_image_data);
     
     CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
     CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault |kCGImageAlphaLast;
