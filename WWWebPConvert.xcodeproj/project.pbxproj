@@ -16,7 +16,6 @@
 		4ADD990621F5B1B300ACC3C4 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD990521F5B1B300ACC3C4 /* UIImage+WebP.m */; };
 		4ADD990821F5BC3100ACC3C4 /* test.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 4ADD990721F5BC3100ACC3C4 /* test.PNG */; };
 		4ADD991121F5D7BA00ACC3C4 /* ToWebPShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD991021F5D7BA00ACC3C4 /* ToWebPShowViewController.m */; };
-		4ADD991321F5D86E00ACC3C4 /* test.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 4ADD991221F5D86E00ACC3C4 /* test.PNG */; };
 		6FCC11CBCFCD9C42943C4263 /* Pods_WWWebPConvert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A09CD339AEE2F33F0680AA /* Pods_WWWebPConvert.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +36,6 @@
 		4ADD990721F5BC3100ACC3C4 /* test.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.PNG; sourceTree = "<group>"; };
 		4ADD990F21F5D7BA00ACC3C4 /* ToWebPShowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToWebPShowViewController.h; sourceTree = "<group>"; };
 		4ADD991021F5D7BA00ACC3C4 /* ToWebPShowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToWebPShowViewController.m; sourceTree = "<group>"; };
-		4ADD991221F5D86E00ACC3C4 /* test.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.PNG; sourceTree = "<group>"; };
 		520ED3654E16AA84304ED131 /* Pods-WWWebPConvert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWWebPConvert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WWWebPConvert/Pods-WWWebPConvert.debug.xcconfig"; sourceTree = "<group>"; };
 		62A09CD339AEE2F33F0680AA /* Pods_WWWebPConvert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WWWebPConvert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -57,7 +55,6 @@
 		4ADD98DF21F5B12100ACC3C4 = {
 			isa = PBXGroup;
 			children = (
-				4ADD991221F5D86E00ACC3C4 /* test.PNG */,
 				4ADD98EA21F5B12100ACC3C4 /* WWWebPConvert */,
 				4ADD98E921F5B12100ACC3C4 /* Products */,
 				B8B8B4D7C15BCADDA5EA4070 /* Pods */,
@@ -174,7 +171,6 @@
 				4ADD98F821F5B12D00ACC3C4 /* LaunchScreen.storyboard in Resources */,
 				4ADD98F521F5B12D00ACC3C4 /* Assets.xcassets in Resources */,
 				4ADD98F321F5B12100ACC3C4 /* Main.storyboard in Resources */,
-				4ADD991321F5D86E00ACC3C4 /* test.PNG in Resources */,
 				4ADD990821F5BC3100ACC3C4 /* test.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

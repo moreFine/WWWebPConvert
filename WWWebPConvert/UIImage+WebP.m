@@ -26,15 +26,16 @@ static void free_image_data(void *info, const void *data, size_t size)
               configBlock:(void (^)(WebPConfig *))configBlock
                     error:(NSError **)error
 {
-    CGFloat scale = image.size.width / image.size.height;
+    UIImage *convertImage = [UIImage imageWithData:UIImageJPEGRepresentation(image, 1.0)];
+    CGFloat scale = convertImage.size.width / convertImage.size.height;
     CGFloat imageWidth = 320 * 2;
-    if (image.size.width > 1000){
+    if (convertImage.size.width > 1000){
         imageWidth = 320 * 3;
     }
-    UIImage *resizeImage = [self imageResize:image size:CGSizeMake(imageWidth,imageWidth/scale)];
-    if (alpha <= 1) {
-        resizeImage = [self webPImage:resizeImage withAlpha:alpha];
-    }
+    UIImage *resizeImage = [self imageResize:convertImage size:CGSizeMake(imageWidth,imageWidth/scale)];
+    
+    resizeImage = [self webPImage:resizeImage withAlpha:alpha];
+    
     CGImageRef webPImageRef = resizeImage.CGImage;
     size_t webPBytesPerRow = CGImageGetBytesPerRow(webPImageRef);
     
